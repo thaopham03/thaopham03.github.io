@@ -1,0 +1,78 @@
+body {
+    background-color: whitesmoke;
+}
+
+.content {
+    width: 500px;
+    margin: auto;
+    padding: 25px 50px;
+    border: thick dashed pink;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-family: cursive;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h5 {
+    color: black;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.theme-toggle:hover {
+    background-color: #f0f0f0;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+    color: #fff;
+}
+
+[data-theme="dark"] a {
+    color: #66b3ff;
+}
+
+[data-theme="dark"] nav {
+    border-bottom-color: #333;
+}
+
+[data-theme="dark"] h2 {
+    border-bottom-color: #333;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background-color: #333;
+}
+
+/* Hide/show sun/moon */
+.sun { display: inline; }
+.moon { display: none; }
+
+[data-theme="dark"] .sun { display: none; }
+[data-theme="dark"] .moon { display: inline; }
