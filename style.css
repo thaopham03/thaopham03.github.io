@@ -43,30 +43,30 @@ h5 {
 }
 
 /* Dark mode styles */
-[data-theme="dark"] {
-    background-color: #1a1a1a;
+body[data-theme="dark"] {
+    background-color: #1a1a1a !important;
     color: #e0e0e0;
 }
 
-[data-theme="dark"] h1,
-[data-theme="dark"] h2,
-[data-theme="dark"] h3 {
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3 {
     color: #fff;
 }
 
-[data-theme="dark"] a {
+body[data-theme="dark"] a {
     color: #66b3ff;
 }
 
-[data-theme="dark"] nav {
+body[data-theme="dark"] nav {
     border-bottom-color: #333;
 }
 
-[data-theme="dark"] h2 {
+body[data-theme="dark"] h2 {
     border-bottom-color: #333;
 }
 
-[data-theme="dark"] .theme-toggle:hover {
+body[data-theme="dark"] .theme-toggle:hover {
     background-color: #333;
 }
 
@@ -74,5 +74,5 @@ h5 {
 .sun { display: inline; }
 .moon { display: none; }
 
-[data-theme="dark"] .sun { display: none; }
-[data-theme="dark"] .moon { display: inline; }
+body[data-theme="dark"] .sun { display: none; }
+body[data-theme="dark"] .moon { display: inline; }
