@@ -1,5 +1,6 @@
 body {
     background-color: whitesmoke;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .content {
@@ -12,19 +13,145 @@ body {
 h1 {
     color: black;
     text-align: center;
-    font-family: cursive;
+    font-family: "JetBrains Mono", monospace;
 }
 
 h2 {
     color: black;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "JetBrains Mono", monospace;
 }
 
 h5 {
     color: black;
     text-align: left;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* Navigation Header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-brand a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #333;
+}
+
+.nav-links .active {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Profile section layout */
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+}
+
+.profile-content {
+    flex: 1;
+    padding-top: 2rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.links li {
+    margin: 0;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.links a:hover {
+    background-color: #f5f5f5;
+    border-color: #ccc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 /* Theme toggle button */
@@ -44,7 +171,7 @@ h5 {
 
 /* Dark mode styles */
 body[data-theme="dark"] {
-    background-color: #1a1a1a !important;
+    background-color: #030b07 !important;
     color: #e0e0e0;
 }
 
@@ -60,6 +187,36 @@ body[data-theme="dark"] a {
 
 body[data-theme="dark"] nav {
     border-bottom-color: #333;
+}
+
+body[data-theme="dark"] .nav-brand a {
+    color: #90ee90;
+}
+
+body[data-theme="dark"] .nav-links a {
+    color: #90ee90;
+}
+
+body[data-theme="dark"] .nav-links a:hover {
+    color: #98fb98;
+}
+
+body[data-theme="dark"] .nav-links .active {
+    color: #98fb98;
+}
+
+body[data-theme="dark"] .profile-image img {
+    border-color: #444;
+}
+
+body[data-theme="dark"] .links a {
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body[data-theme="dark"] .links a:hover {
+    background-color: #333;
+    border-color: #666;
 }
 
 body[data-theme="dark"] h2 {
