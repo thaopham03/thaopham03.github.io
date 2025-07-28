@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Thao Pham</title>
+    <title>Other - Thao Pham</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -19,8 +19,8 @@
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="../research/research.html">Research</a></li>
-                    <li><a href="../blog/blog.html" class="active">Blog</a></li>
-                    <li><a href="other.html">Other</a></li>
+                    <li><a href="../blog/blog.html">Blog</a></li>
+                    <li><a href="other.html" class="active">Other</a></li>
                 </ul>
                 <button id="theme-toggle" class="theme-toggle">
                     <span class="sun">☀️</span>
@@ -30,21 +30,188 @@
         </nav>
 
         <!-- Page Content -->
-        <main>
-            <h1>Other</h1>
-            
-            <div class="Other">
-                <p>Coming soon.</p>
-                <!-- <h2><a href="blog/post-1.html">Coming soon.</a></h2> -->
-                <!-- <p class="date">January 2025</p>
-                <p>Brief excerpt from your blog post that gives readers a taste of what to expect...</p> -->
+        <main class="other-main">
+            <div class="other-header">
+                <h1>Beyond Work</h1>
+                <p class="other-subtitle">...and things that make me happy</p>
             </div>
 
-            <!-- <div class="blog-post">
-                <h2><a href="blog/post-2.html">Another Interesting Topic</a></h2>
-                <p class="date">December 2024</p>
-                <p>Another excerpt from a different blog post...</p>
-            </div> -->
+            <!-- Gallery Section -->
+            <section class="other-section">
+                <h2 class="section-title">Gallery</h2>
+                <p class="section-description">A collection of moments captured through my lens</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop" alt="Photography sample 1" />
+                        <div class="gallery-overlay">
+                            <span class="gallery-title">Mountain Serenity</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=400&fit=crop" alt="Photography sample 2" />
+                        <div class="gallery-overlay">
+                            <span class="gallery-title">Forest Whispers</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop" alt="Photography sample 3" />
+                        <div class="gallery-overlay">
+                            <span class="gallery-title">Urban Reflections</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=400&fit=crop" alt="Photography sample 4" />
+                        <div class="gallery-overlay">
+                            <span class="gallery-title">Golden Hour</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop" alt="Photography sample 5" />
+                        <div class="gallery-overlay">
+                            <span class="gallery-title">City Lights</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=400&fit=crop" alt="Photography sample 6" />
+                        <div class="gallery-overlay">
+                            <span class="gallery-title">Quiet Moments</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Poems Section -->
+            <section class="other-section">
+                <h2 class="section-title">Poetry</h2>
+                <p class="section-description">Old archives. Verses for souls.</p>
+                
+                <div class="poems-list">
+                    <div class="poem-item">
+                        <h3 class="poem-title">I am from</h3>
+                        <p class="poem-date">November 2023</p>
+                        <p class="poem-excerpt">In circuits deep and data streams,<br>
+                        Where algorithms weave their dreams...<br>
+                        <span class="read-more" onclick="togglePoem(this)">Read more</span></p>
+                        <div class="poem-full-content" style="display: none;">
+                            <div class="poem-text">
+                                I am from the sink
+                                From my mother's broom and gloves 
+                                I am from the land of coal 
+                                (Dusty, foggy, and people never look at each other's eyes)
+
+                                I am from Cerastium,
+                                which I remember giving them to my crying long-gone childhood friend
+                                I'm from the year of goat and hardworking holidays 
+                                From my uncle whose name is Five and Six is my aunt's name
+
+                                I'm from the never-tell-me-what-you-really-feel and you're-on-your-own-now
+                                From you're-so-smart and you-should-never-leave-this-town
+                                I'm from worshiping my ancestor to the being-100%-atheist
+                                I'm from Longan (a fruit)'s homeland and unkown Communist family (but not really).
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="poem-item">
+                        <h3 class="poem-title">Coffee Shop Conversations</h3>
+                        <p class="poem-date">December 2024</p>
+                        <p class="poem-excerpt">Steam rises from ceramic cups,<br>
+                        While strangers' stories bubble up...<br>
+                        <span class="read-more" onclick="togglePoem(this)">Read more</span></p>
+                        <div class="poem-full-content" style="display: none;">
+                            <div class="poem-text">
+                                <p>Steam rises from ceramic cups,<br>
+                                While strangers' stories bubble up<br>
+                                In fragments heard through morning's haze—<br>
+                                Love lost, dreams found, forgotten days.</p>
+                                
+                                <p>A student types with urgent pace,<br>
+                                A thesis deadline she must face.<br>
+                                Nearby, an artist sketches light<br>
+                                That filters through the window bright.</p>
+                                
+                                <p>The barista hums an unknown tune,<br>
+                                As afternoon melts into noon.<br>
+                                Each person here, a world apart,<br>
+                                Yet coffee binds each beating heart.</p>
+                                
+                                <p>In this small space where stories meet,<br>
+                                Life's symphony plays bitter-sweet.<br>
+                                I sip my latte, take my notes,<br>
+                                And gather all these human quotes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="poem-item">
+                        <h3 class="poem-title">Between the Lines</h3>
+                        <p class="poem-date">November 2024</p>
+                        <p class="poem-excerpt">In textbooks filled with theorems clear,<br>
+                        I find the poetry that's near...<br>
+                        <span class="read-more" onclick="togglePoem(this)">Read more</span></p>
+                        <div class="poem-full-content" style="display: none;">
+                            <div class="poem-text">
+                                <p>In textbooks filled with theorems clear,<br>
+                                I find the poetry that's near<br>
+                                Between equations' rigid form—<br>
+                                Where beauty weathers academic storm.</p>
+                                
+                                <p>Each function tells a story true,<br>
+                                Each proof reveals a different view<br>
+                                Of how the universe unfolds<br>
+                                Its secrets in these pages old.</p>
+                                
+                                <p>The margin notes in faded ink<br>
+                                Show where some past student would think<br>
+                                Beyond the bounds of what was taught,<br>
+                                To find the wonder they had sought.</p>
+                                
+                                <p>For mathematics is but song,<br>
+                                A rhythm elegant and strong,<br>
+                                And in its harmony I see<br>
+                                The verse that sets my spirit free.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="poem-item">
+                        <h3 class="poem-title">Midnight Coding</h3>
+                        <p class="poem-date">October 2024</p>
+                        <p class="poem-excerpt">When darkness falls and screens glow bright,<br>
+                        I dance with code through endless night...<br>
+                        <span class="read-more" onclick="togglePoem(this)">Read more</span></p>
+                        <div class="poem-full-content" style="display: none;">
+                            <div class="poem-text">
+                                <p>When darkness falls and screens glow bright,<br>
+                                I dance with code through endless night,<br>
+                                My fingers weave through keys like rain,<br>
+                                Creating worlds from digital strain.</p>
+                                
+                                <p>The coffee grows cold by my side,<br>
+                                As functions multiply and divide,<br>
+                                Variables dancing in the light<br>
+                                Of monitors burning through the night.</p>
+                                
+                                <p>Each bracket opens up a door,<br>
+                                To possibilities galore,<br>
+                                While loops spin stories ever new,<br>
+                                And logic builds what dreams pursue.</p>
+                                
+                                <p>In semicolons I find pause,<br>
+                                In indentation, beauty's laws,<br>
+                                For code is poetry in disguise—<br>
+                                Where art and science harmonise.</p>
+                                
+                                <p>And when the dawn breaks through my screen,<br>
+                                I've built another software dream,<br>
+                                A bridge between what is and might<br>
+                                Be born from one more coding night.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
     <script>
@@ -63,6 +230,20 @@
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
         });
+
+        // Poem toggle functionality
+        function togglePoem(button) {
+            const poemContent = button.closest('.poem-item').querySelector('.poem-full-content');
+            const isVisible = poemContent.style.display !== 'none';
+            
+            if (isVisible) {
+                poemContent.style.display = 'none';
+                button.textContent = 'Read more';
+            } else {
+                poemContent.style.display = 'block';
+                button.textContent = 'Show less';
+            }
+        }
     </script>
 </body>
 </html>
