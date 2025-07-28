@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Thao Pham</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-brand">
+                <a href="../about/index.html">Thao Pham</a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="../research/research.html">Research</a></li>
+                    <li><a href="../blog/blog.html" class="active">Blog</a></li>
+                    <li><a href="other.html">Other</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <main>
+            <h1>Other</h1>
+            
+            <div class="Other">
+                <p>Coming soon.</p>
+                <!-- <h2><a href="blog/post-1.html">Coming soon.</a></h2> -->
+                <!-- <p class="date">January 2025</p>
+                <p>Brief excerpt from your blog post that gives readers a taste of what to expect...</p> -->
+            </div>
+
+            <!-- <div class="blog-post">
+                <h2><a href="blog/post-2.html">Another Interesting Topic</a></h2>
+                <p class="date">December 2024</p>
+                <p>Another excerpt from a different blog post...</p>
+            </div> -->
+        </main>
+    </div>
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>

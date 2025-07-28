@@ -20,7 +20,7 @@
                 <ul class="nav-links">
                     <li><a href="research.html" class="active">Research</a></li>
                     <li><a href="../blog/blog.html">Blog</a></li>
-                    <li><a href="#other">Other</a></li>
+                    <li><a href="../other/other.html">Other</a></li>
                 </ul>
                 <button id="theme-toggle" class="theme-toggle">
                     <span class="sun">☀️</span>
@@ -30,20 +30,63 @@
         </nav>
 
         <!-- Page Content -->
-        <main>
-            <h1>Research</h1>
-            
-            <div class="research-item">
-                <h2>Research Project Title</h2>
-                <p class="date">2024 - Present</p>
-                <p>Detailed description of your research project, methodology, findings, and impact.</p>
-                <p><a href="https://link-to-paper.com" target="_blank">Read Paper</a></p>
+        <main class="publications-main">
+            <div class="publications-header">
+                <h1>Research</h1>
+                <p class="publications-subtitle">Selected publications and on-going projects</p>
             </div>
+            
+            <div class="publications-list">
+                <!-- 2025 Publications -->
+                <div class="year-section">
+                    <div class="year-header">2025</div>
+                    <div class="year-publications">
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <div class="publication-badge cogsci">CogSci 2025</div>
+                                <h3 class="paper-title">Chain of Thought Still Thinks Fast: APriCoT Helps with Thinking Slow</h3>
+                                <p class="authors">Kyle Moore, Jesse Roberts, <strong>Thao Pham</strong>, Douglas Fisher</p>
+                                <p class="venue"><em>Cognitive Science Society</em>, Apr 2025</p>
+                                <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                <div class="abstract-content" style="display: none;">
+                                    <p>Language models are known to absorb biases from their training data, leading to predictions driven by statistical regularities rather than semantic relevance. We investigate the impact of these biases on answer choice preferences in the Massive Multi-Task Language Understanding (MMLU) task. Our findings reveal that differences in learned regularities across answer options are predictive of model preferences and mirror human test-taking strategies. To address this issue, we introduce two novel methods: Counterfactual Prompting with Chain of Thought (CoT) and Counterfactual Prompting with Agnostically Primed CoT (APriCoT). We demonstrate that while Counterfactual Prompting with CoT alone is insufficient to mitigate bias, our novel Primed Counterfactual Prompting with CoT approach effectively reduces the influence of base-rate probabilities while improving overall accuracy. Our results suggest that mitigating bias requires a "System-2" like process and that CoT reasoning is susceptible to confirmation bias under some prompting methodologies. Our contributions offer practical solutions for developing more robust and fair language models.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="research-item">
-                <h2>Another Research Project</h2>
-                <p class="date">2023 - 2024</p>
-                <p>Description of another research project you've worked on.</p>
+                <!-- 2024 Publications -->
+                <div class="year-section">
+                    <div class="year-header">2024</div>
+                    <div class="year-publications">
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <div class="publication-badge emnlp">EMNLP 2024</div>
+                                <h3 class="paper-title">The Base-Rate Effect on LLM Benchmark Performance: Disambiguating Test-Taking Strategies From Benchmark Performance</h3>
+                                <p class="authors">Kyle Moore, Jesse Roberts, <strong>Thao Pham</strong>, Oseremhen Ewaleifoh, Douglas Fisher</p>
+                                <p class="venue"><em>Empirical Methods in Natural Language Processing</em>, Sep 2024</p>
+                                <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                <div class="abstract-content" style="display: none;">
+                                    <p>Cloze testing is a common method for measuring the behavior of large language models on a number of benchmark tasks. Using the MMLU dataset, we show that the base-rate probability (BRP) differences across answer tokens are significant and affect task performance ie. guess A if uncertain. We find that counterfactual prompting does sufficiently mitigate the BRP effect. The BRP effect is found to have a similar effect to test taking strategies employed by humans leading to the conflation of task performance and test-taking ability. We propose the Nvr-X-MMLU task, a variation of MMLU, which helps to disambiguate test-taking ability from task performance and reports the latter.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <div class="publication-badge conll">CoNLL 2024</div>
+                                <h3 class="paper-title">Large Language Model Recall Uncertainty is Modulated by the Fan Effect</h3>
+                                <p class="authors">Jesse Roberts, Kyle Moore, <strong>Thao Pham</strong>, Oseremhen Ewaleifoh, Douglas Fisher</p>
+                                <p class="venue"><em>Computational Natural Language Learning</em>, Sep 2024</p>
+                                <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                <div class="abstract-content" style="display: none;">
+                                    <p>Cloze testing is a common method for measuring the behavior of large language models on a number of benchmark tasks. Using the MMLU dataset, we show that the base-rate probability (BRP) differences across answer tokens are significant and affect task performance ie. guess A if uncertain. We find that counterfactual prompting does sufficiently mitigate the BRP effect. The BRP effect is found to have a similar effect to test taking strategies employed by humans leading to the conflation of task performance and test-taking ability. We propose the Nvr-X-MMLU task, a variation of MMLU, which helps to disambiguate test-taking ability from task performance and reports the latter.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -63,6 +106,20 @@
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
         });
+
+        // Abstract toggle functionality
+        function toggleAbstract(button) {
+            const abstractContent = button.nextElementSibling;
+            const isVisible = abstractContent.style.display !== 'none';
+            
+            if (isVisible) {
+                abstractContent.style.display = 'none';
+                button.textContent = 'ABS';
+            } else {
+                abstractContent.style.display = 'block';
+                button.textContent = 'HIDE';
+            }
+        }
     </script>
 </body>
 </html>

@@ -478,18 +478,37 @@ body[data-theme="dark"] .bio p.subtitle {
 .publications-list {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
+}
+
+.year-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.year-header {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ccc;
+    flex-shrink: 0;
+    width: 60px;
+    margin-top: 0.5rem;
+}
+
+.year-publications {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     gap: 2.5rem;
 }
 
 .publication-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
+    width: 100%;
 }
 
 .publication-content {
-    flex: 1;
+    width: 100%;
 }
 
 .publication-badge {
@@ -508,6 +527,18 @@ body[data-theme="dark"] .bio p.subtitle {
 
 .publication-badge.neurips {
     background-color: #2563eb;
+}
+
+.publication-badge.cogsci {
+    background-color: #4a9eff;
+}
+
+.publication-badge.emnlp {
+    background-color: #4a9eff;
+}
+
+.publication-badge.conll {
+    background-color: #4a9eff;
 }
 
 .paper-title {
@@ -553,13 +584,22 @@ body[data-theme="dark"] .bio p.subtitle {
     border-color: #999;
 }
 
-.publication-year {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #ccc;
-    flex-shrink: 0;
-    margin-top: 2rem;
+.abstract-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
 }
+
+.abstract-content p {
+    margin: 0;
+}
+
+
 
 /* Dark theme publications */
 body[data-theme="dark"] .publications-header h1 {
@@ -593,7 +633,13 @@ body[data-theme="dark"] .abs-btn:hover {
     border-color: #777;
 }
 
-body[data-theme="dark"] .publication-year {
+body[data-theme="dark"] .abstract-content {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ccc;
+}
+
+body[data-theme="dark"] .year-header {
     color: #555;
 }
 
@@ -603,14 +649,15 @@ body[data-theme="dark"] .publication-year {
         padding: 1rem;
     }
     
-    .publication-item {
+    .year-section {
         flex-direction: column;
         gap: 1rem;
     }
     
-    .publication-year {
+    .year-header {
+        width: auto;
         margin-top: 0;
-        align-self: flex-start;
+        font-size: 1.3rem;
     }
     
     .publications-header h1 {
