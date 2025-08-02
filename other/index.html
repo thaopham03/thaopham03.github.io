@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 </head>
 <body>
     <div class="container">
@@ -17,11 +23,6 @@
                 <a href="/">Thao Pham</a>
             </div>
             <div class="nav-right">
-                <button id="sidebar-toggle" class="sidebar-toggle">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
                 <ul class="nav-links">
                     <li><a href="/research/">Research</a></li>
                     <li><a href="/blog/">Blog</a></li>
@@ -33,24 +34,6 @@
                 </button>
             </div>
         </nav>
-
-        <!-- Sidebar -->
-        <div id="sidebar" class="sidebar">
-            <div class="sidebar-content">
-                <div class="sidebar-header">
-                    <img src="../img/self-1.png" alt="Thao Pham" class="sidebar-logo">
-                    <h3>Thao Pham</h3>
-                    <p>PhD Student at Vanderbilt University</p>
-                </div>
-                <nav class="sidebar-nav">
-                    <a href="/">Home</a>
-                    <a href="/research/">Research</a>
-                    <a href="/blog/">Blog</a>
-                    <a href="/other/">Other</a>
-                </nav>
-            </div>
-        </div>
-        <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
         <!-- Page Content -->
         <main class="other-main">
@@ -239,37 +222,6 @@
             
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-        });
-
-        // Sidebar functionality
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('sidebar');
-        const sidebarOverlay = document.getElementById('sidebar-overlay');
-
-        function toggleSidebar() {
-            sidebar.classList.toggle('open');
-            sidebarOverlay.classList.toggle('active');
-        }
-
-        function closeSidebar() {
-            sidebar.classList.remove('open');
-            sidebarOverlay.classList.remove('active');
-        }
-
-        sidebarToggle.addEventListener('click', toggleSidebar);
-        sidebarOverlay.addEventListener('click', closeSidebar);
-
-        // Close sidebar when clicking a navigation link
-        const sidebarNavLinks = sidebar.querySelectorAll('.sidebar-nav a');
-        sidebarNavLinks.forEach(link => {
-            link.addEventListener('click', closeSidebar);
-        });
-
-        // Close sidebar on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeSidebar();
-            }
         });
     </script>
 </body>
