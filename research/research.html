@@ -47,9 +47,13 @@
                                 <h3 class="paper-title">Chain of Thought Still Thinks Fast: APriCoT Helps with Thinking Slow</h3>
                                 <p class="authors">Kyle Moore, Jesse Roberts, <strong>Thao Pham</strong>, Douglas Fisher</p>
                                 <p class="venue"><em>Cognitive Science Society</em>, Apr 2025</p>
-                                <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                <div class="publication-buttons">
+                                    <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                    <a href="https://arxiv.org/abs/2408.08651" class="arxiv-btn" target="_blank">ArXiv</a>
+                                    <a href="https://escholarship.org/uc/item/18x411vv" class="pdf-btn" target="_blank">PDF</a>
+                                </div>
                                 <div class="abstract-content" style="display: none;">
-                                    <p>Language models are known to absorb biases from their training data, leading to predictions driven by statistical regularities rather than semantic relevance. We investigate the impact of these biases on answer choice preferences in the Massive Multi-Task Language Understanding (MMLU) task. Our findings reveal that differences in learned regularities across answer options are predictive of model preferences and mirror human test-taking strategies. To address this issue, we introduce two novel methods: Counterfactual Prompting with Chain of Thought (CoT) and Counterfactual Prompting with Agnostically Primed CoT (APriCoT). We demonstrate that while Counterfactual Prompting with CoT alone is insufficient to mitigate bias, our novel Primed Counterfactual Prompting with CoT approach effectively reduces the influence of base-rate probabilities while improving overall accuracy. Our results suggest that mitigating bias requires a "System-2" like process and that CoT reasoning is susceptible to confirmation bias under some prompting methodologies. Our contributions offer practical solutions for developing more robust and fair language models.</p>
+                                    <p>Language models are known to absorb biases from their training data, leading to predictions driven by statistical regularities rather than semantic relevance. We investigate the impact of these biases on answer choice preferences in the Massive Multi-Task Language Understanding (MMLU) task. Our findings show that these biases are predictive of model preference and mirror human test-taking strategies even when chain of thought (CoT) reasoning is used. To address this issue, we introduce Counterfactual Prompting with Agnostically Primed CoT (APriCoT). We demonstrate that while Counterfactual Prompting with CoT alone is insufficient to mitigate bias, APriCoT effectively reduces the influence of base-rate probabilities while improving overall accuracy. Our results suggest that mitigating bias requires a slow thinking process which CoT alone may not provide as it tends to reinforce fast thinking model bias under some prompting methodologies. APriCoT is a step toward developing more robust and fair language models that can think slow.</p>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +70,11 @@
                                 <h3 class="paper-title">The Base-Rate Effect on LLM Benchmark Performance: Disambiguating Test-Taking Strategies From Benchmark Performance</h3>
                                 <p class="authors">Kyle Moore, Jesse Roberts, <strong>Thao Pham</strong>, Oseremhen Ewaleifoh, Douglas Fisher</p>
                                 <p class="venue"><em>Empirical Methods in Natural Language Processing</em>, Sep 2024</p>
-                                <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                <div class="publication-buttons">
+                                    <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                    <a href="https://arxiv.org/abs/2406.11634" class="arxiv-btn" target="_blank">ArXiv</a>
+                                    <a href="https://arxiv.org/pdf/2406.11634" class="pdf-btn" target="_blank">PDF</a>
+                                </div>
                                 <div class="abstract-content" style="display: none;">
                                     <p>Cloze testing is a common method for measuring the behavior of large language models on a number of benchmark tasks. Using the MMLU dataset, we show that the base-rate probability (BRP) differences across answer tokens are significant and affect task performance ie. guess A if uncertain. We find that counterfactual prompting does sufficiently mitigate the BRP effect. The BRP effect is found to have a similar effect to test taking strategies employed by humans leading to the conflation of task performance and test-taking ability. We propose the Nvr-X-MMLU task, a variation of MMLU, which helps to disambiguate test-taking ability from task performance and reports the latter.</p>
                                 </div>
@@ -79,7 +87,11 @@
                                 <h3 class="paper-title">Large Language Model Recall Uncertainty is Modulated by the Fan Effect</h3>
                                 <p class="authors">Jesse Roberts, Kyle Moore, <strong>Thao Pham</strong>, Oseremhen Ewaleifoh, Douglas Fisher</p>
                                 <p class="venue"><em>Computational Natural Language Learning</em>, Sep 2024</p>
-                                <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                <div class="publication-buttons">
+                                    <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                    <a href="https://arxiv.org/html/2407.06349" class="arxiv-btn" target="_blank">ArXiv</a>
+                                    <a href="https://arxiv.org/pdf/2407.06349v2" class="pdf-btn" target="_blank">PDF</a>
+                                </div>
                                 <div class="abstract-content" style="display: none;">
                                     <p>Cloze testing is a common method for measuring the behavior of large language models on a number of benchmark tasks. Using the MMLU dataset, we show that the base-rate probability (BRP) differences across answer tokens are significant and affect task performance ie. guess A if uncertain. We find that counterfactual prompting does sufficiently mitigate the BRP effect. The BRP effect is found to have a similar effect to test taking strategies employed by humans leading to the conflation of task performance and test-taking ability. We propose the Nvr-X-MMLU task, a variation of MMLU, which helps to disambiguate test-taking ability from task performance and reports the latter.</p>
                                 </div>
@@ -109,7 +121,9 @@
 
         // Abstract toggle functionality
         function toggleAbstract(button) {
-            const abstractContent = button.nextElementSibling;
+            // Find the abstract content - it's now the next sibling of the button container
+            const buttonContainer = button.parentElement;
+            const abstractContent = buttonContainer.nextElementSibling;
             const isVisible = abstractContent.style.display !== 'none';
             
             if (isVisible) {
