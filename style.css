@@ -1061,6 +1061,17 @@ body[data-theme="dark"] .poem-text p {
     text-align: left;
 }
 
+/* Remove underline from GWWC section links */
+.other-section .section-description a,
+.gwwc-text a {
+    text-decoration: none;
+}
+
+.other-section .section-description a:hover,
+.gwwc-text a:hover {
+    text-decoration: underline;
+}
+
 /* GWWC Images styling */
 .gwwc-images {
     display: flex;
