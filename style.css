@@ -1044,3 +1044,60 @@ body[data-theme="dark"] .poem-text p {
         padding: 1rem;
     }
 }
+
+/* GWWC styling */
+.gwwc-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gwwc-text p {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* GWWC Images styling */
+.gwwc-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.gwwc-image {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.gwwc-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gwwc-image img:hover {
+    transform: scale(1.02);
+}
+
+.image-caption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive adjustments for GWWC images */
+@media (max-width: 768px) {
+    .gwwc-image {
+        max-width: 100%;
+    }
+}
