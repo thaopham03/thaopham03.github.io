@@ -444,6 +444,38 @@ body[data-theme="dark"] .simple-main p {
     color: #aaa;
 }
 
+/* Footer styles */
+.site-footer {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Dark theme footer */
+body[data-theme="dark"] .site-footer {
+    border-top-color: #333;
+    background-color: #1a1a1a;
+}
+
+body[data-theme="dark"] .footer-content p {
+    color: #aaa;
+}
+
 /* Updates section styling */
 .updates {
     margin-top: 2rem;
