@@ -80,7 +80,27 @@ nav {
     font-weight: 600;
 }
 
-/* Profile section layout */
+/* Simple main page layout */
+.simple-main {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.simple-main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.simple-main p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Profile section layout (kept for other potential uses) */
 .profile-section {
     display: flex;
     align-items: flex-start;
@@ -414,6 +434,15 @@ body[data-theme="dark"] .theme-toggle:hover {
 
 body[data-theme="dark"] .sun { display: none; }
 body[data-theme="dark"] .moon { display: inline; }
+
+/* Dark theme for simple main page */
+body[data-theme="dark"] .simple-main h1 {
+    color: #e0e0e0;
+}
+
+body[data-theme="dark"] .simple-main p {
+    color: #aaa;
+}
 
 /* Updates section styling */
 .updates {
