@@ -12,12 +12,14 @@
         <!-- Navigation -->
         <nav>
             <div class="nav-brand">
-                <a href="/">
-                    <img src="img/self-1.png" alt="Thao Pham" class="nav-logo">
-                    Thao Pham
-                </a>
+                <a href="/">Thao Pham</a>
             </div>
             <div class="nav-right">
+                <button id="sidebar-toggle" class="sidebar-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
                 <ul class="nav-links">
                     <li><a href="research/">Research</a></li>
                     <li><a href="blog/">Blog</a></li>
@@ -29,6 +31,24 @@
                 </button>
             </div>
         </nav>
+
+        <!-- Sidebar -->
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-header">
+                    <img src="img/self-1.png" alt="Thao Pham" class="sidebar-logo">
+                    <h3>Thao Pham</h3>
+                    <p>PhD Student at Vanderbilt University</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="/">Home</a>
+                    <a href="research/">Research</a>
+                    <a href="blog/">Blog</a>
+                    <a href="other/">Other</a>
+                </nav>
+            </div>
+        </div>
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
         <!-- Main Content -->
         <main class="home">
             <div class="profile-section">
@@ -173,6 +193,37 @@
             
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+        });
+
+        // Sidebar functionality
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            sidebarOverlay.classList.toggle('active');
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+        }
+
+        sidebarToggle.addEventListener('click', toggleSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+
+        // Close sidebar when clicking a navigation link
+        const sidebarNavLinks = sidebar.querySelectorAll('.sidebar-nav a');
+        sidebarNavLinks.forEach(link => {
+            link.addEventListener('click', closeSidebar);
+        });
+
+        // Close sidebar on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeSidebar();
+            }
         });
     </script>
 </body>
