@@ -547,6 +547,40 @@ body[data-theme="dark"] .bio p.subtitle {
     color: #aaa;
 }
 
+/* Interests section styling */
+.interests {
+    margin-top: 2rem;
+}
+
+.interests h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.8rem 0;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.interests p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    color: #444;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.interests p:last-child {
+    margin-bottom: 0;
+}
+
+/* Dark theme interests */
+body[data-theme="dark"] .interests h3 {
+    color: #fff;
+}
+
+body[data-theme="dark"] .interests p {
+    color: #ccc;
+}
+
 /* Publications page styling */
 .publications-main {
     max-width: 800px;
