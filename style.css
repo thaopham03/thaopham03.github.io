@@ -705,7 +705,7 @@ body[data-theme="dark"] .interests p {
     margin-bottom: 1rem;
 }
 
-.abs-btn, .arxiv-btn, .pdf-btn {
+.abs-btn, .arxiv-btn, .pdf-btn, .poster-btn {
     padding: 0.4rem 1rem;
     border: 1px solid #ccc;
     background: white;
@@ -719,7 +719,7 @@ body[data-theme="dark"] .interests p {
     margin-right: 0.5rem;
 }
 
-.abs-btn:hover, .arxiv-btn:hover, .pdf-btn:hover {
+.abs-btn:hover, .arxiv-btn:hover, .pdf-btn:hover, .poster-btn:hover {
     background-color: #f5f5f5;
     border-color: #999;
 }
@@ -741,6 +741,16 @@ body[data-theme="dark"] .interests p {
 
 .pdf-btn:hover {
     background-color: #d63384;
+    color: white;
+}
+
+.poster-btn {
+    color: #198754;
+    border-color: #198754;
+}
+
+.poster-btn:hover {
+    background-color: #198754;
     color: white;
 }
 
@@ -812,6 +822,17 @@ body[data-theme="dark"] .pdf-btn {
 
 body[data-theme="dark"] .pdf-btn:hover {
     background-color: #ff69b4;
+    color: #333;
+}
+
+body[data-theme="dark"] .poster-btn {
+    background: #333;
+    color: #5cb85c;
+    border-color: #5cb85c;
+}
+
+body[data-theme="dark"] .poster-btn:hover {
+    background-color: #5cb85c;
     color: #333;
 }
 
