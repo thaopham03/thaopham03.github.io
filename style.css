@@ -1222,6 +1222,10 @@ body[data-theme="dark"] .blog-date {
     color: #333;
 }
 
+.post-content h2 {
+    text-align: left;
+}
+
 .blog-image {
     margin: 2rem 0;
     text-align: center;
