@@ -129,7 +129,7 @@ nav {
     flex-direction: column;
     align-items: center;
     flex-shrink: 0;
-    width: 350px;
+    width: 420px;
 }
 
 .profile-image {
@@ -137,17 +137,17 @@ nav {
 }
 
 .profile-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 420px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
     border: 3px solid #e0e0e0;
 }
 
 .profile-content {
     flex: 1;
     padding-top: 2rem;
-    max-width: calc(100% - 350px - 6rem);
+    max-width: calc(100% - 420px - 6rem);
 }
 
 .tagline {
@@ -309,7 +309,7 @@ body[data-theme="dark"] li {
     
     .profile-image img {
         width: 300px;
-        height: 300px;
+        height: auto;
     }
 }
 
@@ -329,7 +329,7 @@ body[data-theme="dark"] li {
     
     .profile-image img {
         width: 280px;
-        height: 280px;
+        height: auto;
     }
     
     .profile-content {
