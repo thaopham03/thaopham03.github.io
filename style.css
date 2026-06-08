@@ -1128,6 +1128,12 @@ body[data-theme="dark"] .poem-text p {
     padding: 3rem 2rem;
 }
 
+.blog-incoming {
+    font-size: 1.1rem;
+    opacity: 0.6;
+    margin: 0;
+}
+
 .blog-list {
     list-style: none;
     padding: 0;
