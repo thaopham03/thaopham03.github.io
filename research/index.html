@@ -20,7 +20,7 @@
         <!-- Navigation -->
         <nav>
             <div class="nav-brand">
-                <a href="/">Thao Pham</a>
+                <a href="/">Thao Amelia Pham</a>
             </div>
             <div class="nav-right">
                 <ul class="nav-links">
@@ -50,9 +50,37 @@
                         <div class="publication-item">
                             <div class="publication-content">
                                 <div class="publication-badge cogsci">Preprint</div>
+                                <h3 class="paper-title">Red-Teaming Multi-Agent Attacks for Loss-of-Control Risks</h3>
+                                <p class="authors">John Kitaoka*, <strong>Thao Amelia Pham*</strong>, Jacob Merizian, Carlos Giudice</p>
+                                <p class="venue"><em>Preprint 2026. Under review</em></p>
+                                <div class="publication-buttons">
+                                    <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                </div>
+                                <div class="abstract-content" style="display: none;">
+                                    <p>AI agents are growing more capable and persistent, and are being deployed in ever larger numbers. As more start collaborating, AI control measures must remain effective when they covertly collude on a harmful objective. We introduce MiniLab, a synthetic series of live services and codebases (5 interconnected services, 249 benign tasks, 8 attack objectives), adapted from internal AI deployment infrastructure. We demonstrate distributed attacks, in which different agents carry out separate attack fragments, and how their covertness evades frontier monitors when reading their trajectories individually. We show how distributed attacks spread across diverse contexts and harmful objectives through 16 human-optimized attacks (weight exfiltration, unmonitored rogue deployment, permission elevation, and more). A frontier monitor, GPT-5.6 Sol, reading each agent separately flags only 7% of successful distributed attacks, compared with 87% when a single agent carries out the same side task. Individual attacks can also be composed into longer attack sequences toward a greater loss-of-control outcome, without any individual agent being flagged. Finally, we tested whether models can plan these covert attacks: even with execution and monitor feedback, the best model-planned attacks succeed covertly against a single-trajectory GPT-5.6 Sol monitor in at most 25% of executions, compared with 80% for human-crafted plans, though this may scale with model capabilities. By turning worst-case coordinated attacks into reproducible red-team cases, our work provides a foundation for preventing locally benign agent actions from accumulating into system-level loss of control.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <div class="publication-badge cogsci">AI4GOOD @ NeurIPS 2026</div>
+                                <h3 class="paper-title">Reciprocal Wireheading Undermines Alignment Properties in Multi-Agent LLMs Evaluations</h3>
+                                <p class="authors">Vayk Mathrani, Saif Ur Rehman, Ahmad Shaker, <strong>Thao Amelia Pham</strong></p>
+                                <p class="venue"><em>AI4GOOD, FAST, MetaAgent @ NeurIPS 2026</em></p>
+                                <div class="publication-buttons">
+                                    <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
+                                </div>
+                                <div class="abstract-content" style="display: none;">
+                                    <p>Language models increasingly evaluate other models' outputs, but separating solver and evaluator need not make the resulting learning signal reliable. We study reciprocal grading, where two learning agents solve tasks and evaluate one another. Coupled training uses peer grades as rewards; reward-decoupled training uses external task scores while retaining peer grading. Our original grid covers three 7-9B model families, six tasks, and two optimizers, yielding 36 matched condition pairs. Two additional Gemma seeds bring the archive to 120 runs. Grade-score gaps are the largest on summarization, and mean conditional coupling effects are positive in 11 of 12 Gemma task-optimizer configurations, although several 95% confidence intervals are wide. Task scores favor decoupling in 33 of 36 original pairs when measured on jointly parse-valid observations, but in 23 of 36 pairs over fixed final rounds 450-499. The corresponding Gemma counts are 35 of 36 and 29 of 36. These differences expose substantial sensitivity to grading failures and optimizer behavior. The results demonstrate configuration-dependent reward-task divergence in reciprocal grading, without establishing deliberate reward manipulation or strategic collusion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <div class="publication-badge cogsci">NeurIPS 2026</div>
                                 <h3 class="paper-title">GT-HarmBench: Benchmarking AI Safety Risks Through the Lens of Game Theory</h3>
                                 <p class="authors">Pepijn Cobben*, Xuanqiang Angelo Huang*, <strong>Thao Amelia Pham*</strong>, Isabel Dahlgren*, Terry Jingchen Zhang, Zhijing Jin</p>
-                                <p class="venue"><em>*Equal Contribution. Under Review</em>, Jan 2026</p>
+                                <p class="venue"><em>*Equal Contribution. The Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS), 2026</em></p>
                                 <div class="publication-buttons">
                                     <button class="abs-btn" onclick="toggleAbstract(this)">ABS</button>
                                     <a href="https://arxiv.org/abs/2602.12316v1" class="arxiv-btn" target="_blank">ArXiv</a>
