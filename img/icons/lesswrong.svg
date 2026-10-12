@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 24" role="img" aria-label="LessWrong">
+  <title>LessWrong</title>
+  <g fill="none" stroke="#000" stroke-width="2.9" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M3.4 4.2 V19.8 H11.2"/>
+    <path d="M14.4 4.2 L17.6 19.8 L21.3 10.6 L25 19.8 L28.2 4.2"/>
+  </g>
+</svg>

@@ -1,6 +1,18 @@
+:root {
+    --font-body: "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+}
+
+html {
+    /* EB Garamond has a small x-height; nudge the root size so text reads
+       at the same visual weight as the previous system sans stack. */
+    font-size: 107.5%;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
     background-color: whitesmoke;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-body);
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -27,19 +39,19 @@ main {
 h1 {
     color: black;
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-body);
 }
 
 h2 {
     color: black;
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-body);
 }
 
 h5 {
     color: black;
     text-align: left;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-body);
 }
 
 /* Navigation Header */
@@ -118,8 +130,8 @@ nav {
 .profile-section {
     display: flex;
     align-items: flex-start;
-    gap: 6rem;
-    max-width: 1200px;
+    gap: 10rem;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -129,15 +141,15 @@ nav {
     flex-direction: column;
     align-items: center;
     flex-shrink: 0;
-    width: 420px;
+    width: 240px;
 }
 
 .profile-image {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
 }
 
 .profile-image img {
-    width: 420px;
+    width: 240px;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
@@ -146,8 +158,8 @@ nav {
 
 .profile-content {
     flex: 1;
-    padding-top: 2rem;
-    max-width: calc(100% - 420px - 6rem);
+    padding-top: 0;
+    max-width: calc(100% - 240px - 10rem);
 }
 
 .tagline {
@@ -205,20 +217,21 @@ body[data-theme="dark"] .bio a {
 /* Social links styling */
 .social-links {
     width: 100%;
-    max-width: 350px;
+    max-width: 100%;
 }
 
 .social-grid {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0;
+    flex-wrap: nowrap;
 }
 
 .social-item {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s;
@@ -231,8 +244,8 @@ body[data-theme="dark"] .bio a {
 }
 
 .social-icon {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.05rem;
+    height: 1.05rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,7 +291,7 @@ body[data-theme="dark"] .bio p {
 
 /* List styling to match the rest of the content */
 ul, ol, li {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.7;
     color: #444;
@@ -298,18 +311,27 @@ body[data-theme="dark"] li {
 /* Tablet design */
 @media (max-width: 1024px) {
     .profile-section {
-        gap: 4rem;
+        gap: 6rem;
         max-width: 100%;
         padding: 1.5rem;
     }
     
     .profile-left {
-        width: 300px;
+        width: 200px;
     }
     
     .profile-image img {
-        width: 300px;
+        width: 200px;
         height: auto;
+    }
+    
+    .profile-content {
+        max-width: calc(100% - 200px - 6rem);
+    }
+    
+    .updates-section,
+    .home-section {
+        padding: 0 1.5rem 2.5rem;
     }
 }
 
@@ -328,7 +350,7 @@ body[data-theme="dark"] li {
     }
     
     .profile-image img {
-        width: 280px;
+        width: 180px;
         height: auto;
     }
     
@@ -345,6 +367,16 @@ body[data-theme="dark"] li {
         text-align: center;
     }
     
+    .updates-section,
+    .home-section {
+        padding: 0 1.5rem 2.5rem;
+    }
+    
+    .updates-section .updates,
+    .home-section {
+        padding-top: 2rem;
+    }
+    
     .updates {
         text-align: left;
     }
@@ -353,13 +385,17 @@ body[data-theme="dark"] li {
         text-align: center;
     }
     
+    .social-links {
+        max-width: 200px;
+    }
+    
     .social-grid {
-        gap: 0.8rem;
+        gap: 0.25rem;
     }
     
     .social-icon {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.05rem;
+        height: 1.05rem;
     }
     
     .social-item a {
@@ -494,7 +530,52 @@ body[data-theme="dark"] .footer-content p {
     color: #aaa;
 }
 
-/* Updates section styling */
+/* Sections 2-4: updates, research and writing, each spanning the full
+   width under photo + bio, separated by a hairline rule */
+.updates-section,
+.home-section {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem;
+}
+
+.updates-section .updates,
+.home-section {
+    border-top: 1px solid #e0e0e0;
+}
+
+.updates-section .updates {
+    margin-top: 0;
+    padding-top: 2.5rem;
+}
+
+.home-section {
+    padding-top: 2.5rem;
+}
+
+/* Anchor targets shouldn't land flush against the top of the viewport */
+.updates-section,
+.home-section {
+    scroll-margin-top: 1.5rem;
+}
+
+.home-section > h2 {
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.home-section > .publications-subtitle {
+    margin: -1rem 0 2rem 0;
+}
+
+body[data-theme="dark"] .updates-section .updates,
+body[data-theme="dark"] .home-section {
+    border-top-color: #333;
+}
+
 .updates {
     margin-top: 2rem;
 }
@@ -547,6 +628,63 @@ body[data-theme="dark"] .bio p.subtitle {
     color: #aaa;
 }
 
+/* Misc section: talks */
+.misc-subhead {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.talk-item {
+    margin-bottom: 2rem;
+}
+
+.talk-item:last-child {
+    margin-bottom: 0;
+}
+
+.talk-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #4a9eff;
+    text-decoration: none;
+}
+
+.talk-title:hover {
+    text-decoration: underline;
+}
+
+.talk-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.3rem 0 0.6rem 0;
+}
+
+.talk-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
+}
+
+/* Dark theme misc */
+body[data-theme="dark"] .misc-subhead {
+    color: #fff;
+}
+
+body[data-theme="dark"] .talk-title {
+    color: #66b3ff;
+}
+
+body[data-theme="dark"] .talk-meta {
+    color: #aaa;
+}
+
+body[data-theme="dark"] .talk-description {
+    color: #ccc;
+}
+
 /* Interests section styling */
 .interests {
     margin-top: 2rem;
@@ -557,7 +695,7 @@ body[data-theme="dark"] .bio p.subtitle {
     font-weight: 600;
     margin: 0 0 0.8rem 0;
     color: #333;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-body);
 }
 
 .interests p {
@@ -565,7 +703,7 @@ body[data-theme="dark"] .bio p.subtitle {
     line-height: 1.7;
     margin-bottom: 1.2rem;
     color: #444;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-body);
 }
 
 .interests p:last-child {
@@ -611,7 +749,7 @@ body[data-theme="dark"] .interests p {
 .publications-list {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .year-section {
@@ -621,7 +759,7 @@ body[data-theme="dark"] .interests p {
 }
 
 .year-header {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
     color: #ccc;
     flex-shrink: 0;
@@ -633,7 +771,7 @@ body[data-theme="dark"] .interests p {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .publication-item {
@@ -646,12 +784,12 @@ body[data-theme="dark"] .interests p {
 
 .publication-badge {
     display: inline-block;
-    padding: 0.3rem 0.8rem;
+    padding: 0.22rem 0.6rem;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 600;
     color: white;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
 }
 
 .publication-badge.preprint {
@@ -675,15 +813,15 @@ body[data-theme="dark"] .interests p {
 }
 
 .paper-title {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 0.6rem 0;
     line-height: 1.4;
     color: #333;
 }
 
 .authors {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     margin: 0 0 0.5rem 0;
     line-height: 1.5;
     color: #444;
@@ -696,7 +834,7 @@ body[data-theme="dark"] .interests p {
 }
 
 .venue {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     margin: 0 0 1rem 0;
     color: #444;
 }
@@ -706,10 +844,10 @@ body[data-theme="dark"] .interests p {
 }
 
 .abs-btn, .arxiv-btn, .pdf-btn, .poster-btn, .lesswrong-btn {
-    padding: 0.4rem 1rem;
+    padding: 0.3rem 0.8rem;
     border: 1px solid #ccc;
     background: white;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 600;
     cursor: pointer;
     border-radius: 3px;
@@ -765,12 +903,12 @@ body[data-theme="dark"] .interests p {
 }
 
 .abstract-content {
-    margin-top: 1rem;
-    padding: 1rem;
+    margin-top: 0.8rem;
+    padding: 0.9rem;
     background-color: #f8f9fa;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.6;
     color: #555;
 }
